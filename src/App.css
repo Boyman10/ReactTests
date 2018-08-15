@@ -1,28 +1,28 @@
-.App {
-  text-align: center;
+.memory > .card {
+  font-size: 2em;
+  flex: 1 1 calc(100% / 6 - 0.4em);
+  outline: 0.08em solid silver;
+  margin: 0.2em;
+  display: flex;
+  cursor: default;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.memory > .card.hidden {
+  background: silver;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.memory > .card.justMatched,
+.memory > .card.justMismatched {
+  outline: 0.1em solid green;
+}
+.memory > .card.justMismatched {
+  outline-color: red;
 }
 
-.App-title {
-  font-size: 1.5em;
+.memory > .card.visible {
+  cursor: not-allowed;
 }
 
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.memory > .card > .symbol {
+  margin: auto;
 }
